@@ -1,91 +1,136 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  transition: all .4s ease-in-out;
+    transition: all 0.4s ease-out;
 }
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body {
+    margin: 0;
+    padding: 0;
 }
 
-.btn {
-  color: #000;
-  background-color: #ffffffe3;
-  border: 2px solid #ffffffe3;
-  padding: 0.5em 1em;
-  transition: all .4s ease-in-out;
-  will-change: filter;
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
-.btn:hover {
-  border: 2px solid #ffffffe3;
-  filter: drop-shadow(0 0 2em #646cffaa);
-  transform: scale(103%);
+.todo__list {
+    padding: 8px 16px;
 }
-.btn:focus {
-  outline: none;
-}
-input {
-  color: #ffffffe3;
-  border: 2px solid #ffffffaa;
-  background-color: #000;
-  outline: none;
-  font-size: 18px;
-  margin: 0 10px 0 0;
-  border-radius: 8px;
-}
-input:hover, input:focus {
-  border: 2px solid #ffffffe3;
-  filter: drop-shadow(0 0 2em #646cffaa);
+h1, h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    background-color: rgb(128, 12, 182);
+    padding: 8px;
+    margin: 0;
 }
 
-.p-1 {
-  padding: 4px;
-}
-.p-2 {
-  padding: 8px;
-}
-.p-3 {
-  padding: 12px;
-}
-.p-4 {
-  padding: 18px;
+li::marker {
+    color: rgb(128, 12, 182);
+    font-size: 18px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
 }
 
-h2 {
-  color: #ffffffe3;
-  margin: 1em 0;
-}
-
-ul {
-  list-style-type: none;
-  color: #ffffffe3;
-  padding: 0;
-  text-align: left;
-  will-change: filter;
-}
-
-ul:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+ol {
+    padding-right: 30px;
 }
 
 li {
-  padding: 8px 16px;
-  background-color:#646cffaa;
-  cursor: default;
+    font-family: Arial, sans-serif;
+    color: rgb(2, 128, 128);
+    font-size: 18px;
+    padding: 4px 2px;
+    border-bottom: 1px dashed rgb(128, 12, 182);
+    text-transform: capitalize;
 }
 
-li:hover {
-  /* background-color: #646cffaa; */
-  filter: drop-shadow(0 0 1em rgba(41, 41, 41, 0.514));
-  transform: scale(103%);
+li > button {
+    display: none;
+}
+li:hover > button {
+    display: inline;
 }
 
-li:first-child {
-  border-radius: 8px 8px 0 0 ;
+.btn-primary {
+    font-weight: 600;
+    margin: 10px;
+    padding: 8px 16px;
+    border: 2px solid rgb(128, 12, 182);
+    border-radius: 50px;
+    background-color: rgb(128, 12, 182);
+    color: #fff;
+    transition: all 0.4s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-li:last-child {
-  border-radius: 0 0 8px 8px;
+.btn-primary:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(128, 12, 182);
+}
+.btn-danger {
+    font-size: 18px;
+    position: absolute;
+    right: 10%;
+    padding: 0px 2epx;
+    border: none;
+    /* border: 2px solid rgb(189, 56, 96); */
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(189, 56, 96);
+    transition: all 0.4s ease-out;
+}
+.btn-danger:hover {
+    background-color: rgb(189, 56, 96);
+    color: #fff;
+}
+
+.btn-success {
+    font-size: 18px;
+    position: absolute;
+    right: 10%;
+    padding: 0px 2px;
+    border: none;
+    /* border: 2px solid rgb(44, 197, 82); */
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(44, 197, 82);
+    transition: all 0.4s ease-out;
+}
+.btn-success:hover {
+    background-color: rgb(44, 197, 82);
+    color: #fff;
+}
+
+.add-new-task {
+    border: none;
+    border-radius: 4px 4px 0 0;
+    padding: 12px 16px 4px 16px;
+    color: rgb(128, 12, 182);
+    font-size: 18px;
+    border-bottom: 2px solid rgb(128, 12, 182);
+    transition: all 0.4s ease-out;
+}
+.add-new-task:focus {
+    outline: none;
+    background-color: rgb(242, 228, 255);
+}
+
+.actions {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px 0px;
+    margin-bottom: 30px;
+}
+
+.btn-lg {
+    padding: 4px 14px;
+}
+
+.completed__item {
+    text-decoration: line-through;
+    color: rgb(128, 128, 128);
 }
